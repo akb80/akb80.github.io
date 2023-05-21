@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head> 
+	<title> Check your water quality</title>
+    <link rel="stylesheet" type="text/css" href="code.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	body {
+		background-image: url("new background.jpg");
+			background-repeat: no-repeat;
+			background-size: 100%;
+            background-attachment: fixed;
+    }
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+</style>
+</head>
+<body>
+	<header>
+        <img src="logo2.jpg" alt="Logo" class="logo">
+	<h1>TOYAM</h1>
+    </header>
+	<nav>
+      <a href="index.html">Home</a>
+      <a href="PuneWater.html">Pune's water</a>
+      <a href="Sensor.html">Sensors</a>
+      
+	</nav>
+	<br>
+    <main>
+        <section>
+		
+            <h2>  Parameters:</font> </h2>
+            <p> <font color="purple">Please fill in the following information to check water quality!</font> </p>
+            <p1> <font color="yellow">What is the type of water: <br>
+                <input type="radio" name="type" value="drink"> Drink 
+                <input type="radio" name="type" value="used"> Used<br>
+            </p1>
+            <br>
+            <div class="container">
+                <table>
+            <form id="water-quality-form">
+                TOC          <input type="number" id="toc" placeholder="(0-10) mg/L"> <br><br>
+                Dissolved O2 <input type="number" id="dissolved-o2" placeholder="(0-10) mg/L"> <br><br>
+                Chlorine     <input type="number" id="chlorine" placeholder="(0-10) mg/L"> <br><br>
+                Conductivity <input type="number" id="conductivity" placeholder="(0-10) mS/cm"> <br><br>
+                pH           <input type="number" id="ph" placeholder="(0-14)"> <br><br>
+                <button type="submit" id="check-button">CHECK</button>
+              </form>
+            </table>
+            </div>
+              
+         <script>
+          function tocCheck() {
+          const tocInput = document.getElementById("toc");
+          const toc = tocInput.value;
+          let tocValid = true;
+          
+          if (toc < 3|| toc > 8) {
+            tocValid = false;
+          }
+          
+          const result1 = document.getElementById("result1");
+          
+          if (tocValid) {
+            result1.textContent = "TOC level is within the acceptable range.";
+          } else {
+            result1.textContent = "TOC level is not within the acceptable range.";
+          }
+        }
+        
+        function dissolvedO2Check() {
+          const dissolvedO2Input = document.getElementById("dissolved-o2");
+          const dissolvedO2 = dissolvedO2Input.value;
+          let dissolvedO2Valid = true;
+          
+          if (dissolvedO2 < 3|| dissolvedO2 > 8) {
+            dissolvedO2Valid = false;
+          }
+          
+          const result2 = document.getElementById("result2");
+          
+          if (dissolvedO2Valid) {
+            result2.textContent = "Dissolved O2 level is within the acceptable range.";
+          } else {
+            result2.textContent = "Dissolved O2 level is not within the acceptable range.";
+          }
+        }
+        
+        function chlorineCheck() {
+          const chlorineInput = document.getElementById("chlorine");
+          const chlorine = chlorineInput.value;
+          let chlorineValid = true;
+          
+          if (chlorine < 3 || chlorine > 8) {
+            chlorineValid = false;
+          }
+          
+          const result3 = document.getElementById("result3");
+          
+          if (chlorineValid) {
+            result3.textContent = "Chlorine level is within the acceptable range.";
+          } else {
+            result3.textContent = "Chlorine level is not within the acceptable range.";
+          }
+        }
+        
+        function conductivityCheck() {
+          const conductivityInput = document.getElementById("conductivity");
+          const conductivity = conductivityInput.value;
+          let conductivityValid = true;
+          
+          if (conductivity < 3 || conductivity > 8) {
+            conductivityValid = false;
+          }
+          
+          const result4 = document.getElementById("result4");
+          
+          if (conductivityValid) {
+            result4.textContent = "Conductivity level is within the acceptable range.";
+          } else {
+            result4.textContent = "Conductivity level is not within the acceptable range.";
+          }
+        }
+        
+        function phCheck() {
+          const phInput = document.getElementById("ph");
+          const ph = phInput.value;
+          let phValid = true;
+          
+          if (ph < 3 || ph > 8) {
+            phValid = false;
+          }
+          
+          const result5 = document.getElementById("result5");
+          
+          if (phValid) {
+            result5.textContent = "pH level is within the acceptable range.";
+          } else {
+            result5.textContent = "pH level is not within the acceptable range.";
+          }
+        }
+        // Get references to the form and check button
+        const form = document.getElementById("water-quality-form");
+        const checkButton = document.getElementById("check-button");
+        
+        // Add event listener to the form to prevent it from submitting
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+        });
+        
+        // Add event listener to the check button to call all the checking functions
+        checkButton.addEventListener("click", function() {
+          tocCheck();
+          dissolvedO2Check();
+          chlorineCheck();
+          conductivityCheck();
+          phCheck();
+          
+        }
+        );
+              </script>
+              <br><br>
+        <p2 id="result1"></p2> <br><br>
+        <p2 id="result2"></p2>  <br><br>
+        <p2 id="result3"></p2> <br><br>
+        <p2 id="result4"></p2> <br><br>
+        <p2 id="result5"></p2> <br><br>
+
+
+        <br><br><br><br><br><br><br><br><br><br>
+        </font>
+        </section>
+    </main>
+    
+        <footer>
+            <a href="FAQ.html">FAQ</a>
+            <a href="About Us.html">About Us</a>
+              <a href="Contact Us.html">Contact Us</a>
+            <a class="copyright" href="#">&copy; 2023 | TOYAM</a>
+        </footer>
+</body>
+</html>
