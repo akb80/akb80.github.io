@@ -1,0 +1,139 @@
+
+body {
+margin: 0;
+    opacity: 1;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    /* margin-bottom: 500px; */
+}
+
+
+h1 {
+text-align: center;
+}
+header {
+  padding: 40px;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+nav {
+  background-color: black;
+  overflow: hidden;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  float: left;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: tomato;
+}
+
+section {
+  text-align: center;
+  padding-top: 40px;
+  height: 120vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+footer a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  float: left;
+}
+
+footer .copyright {
+  float: right;
+}
+
+
+form {
+margin-top: 30px;
+text-align: center;
+margin-left: 435px;
+}
+
+form label {
+display: block;
+margin-bottom: 10px;
+}
+
+ forminput[type="number"] {
+width: 200px;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+form input[type="submit"] {
+    padding:15px;
+    background: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline:none;
+    cursor:pointer;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#result {
+margin-top: 30px;
+text-align: center;
+font-weight: bold;
+padding-bottom: 5px;
+}
+
+
+ .error {
+   color: red;
+   margin-top: 5px;
+ }
+ form{
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    display:flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 65%;
+    max-width:315px;
+    border-radius: 10px;
+}
+form h3{
+    color:#555;
+    font-weight: 800;
+    margin-bottom: 20px;
+    padding-right: 100px
+}
+form input,form textarea{
+  display: flex;  
+  border:0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;  
+}
+p{
+    margin-left: 5px;
+}
