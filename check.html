@@ -95,12 +95,12 @@ img {vertical-align: middle;}
       });
       function phCheck(ph) {
    
-    if (0<ph < 7) {
+    if (ph < 6.5) {
     return 'pH Level: Bad';
-  } else if (14>ph > 7) {
+  } else if (ph > 8.5) {
     return 'pH Level: Bad';
   } else {
-    return 'pH Level: Neutral';
+    return 'pH Level: Good';
   }
 }
 
