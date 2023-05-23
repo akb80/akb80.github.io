@@ -100,15 +100,15 @@ img {vertical-align: middle;}
   } else if (ph > 8.5) {
     return 'pH Level: Bad';
   } else {
-    return 'pH Level: Good';
+    return 'pH Level: Neutral';
   }
 }
 
 
 function temperatureCheck(temperature) {
-  if (temperature < 25) {
+  if (temperature < 15) {
     return 'Temperature: Bad';
-  } else if (temperature > 25) {
+  } else if (temperature > 40) {
     return 'Temperature: Bad';
   } else {
     return 'Temperature: Good';
@@ -117,51 +117,51 @@ function temperatureCheck(temperature) {
 
 function turbidityCheck(turbidity) {
   if (turbidity < 5) {
-    return 'Turbidity: Bad';
+    return 'Turbidity: Good';
   } else if (turbidity > 5) {
     return 'Turbidity: Bad';
   } else {
-    return 'Turbidity: Good';
+    return 'Turbidity: Bad';
   }
 }
 
 function tocCheck(toc) {
   if (toc < 1) {
-    return 'Total Organic Carbon (TOC): Bad';
+    return 'Total Organic Carbon (TOC): Good';
   } else if (toc > 1) {
     return 'Total Organic Carbon (TOC): Bad';
   } else {
-    return 'Total Organic Carbon (TOC): Good';
+    return 'Total Organic Carbon (TOC): Bad';
   }
 }
 
 function dissolvedO2Check(dissolvedO2) {
-  if (dissolvedO2 < 5) {
-    return 'Dissolved Oxygen (DO): Bad';
+  if (2< dissolvedO2 < 5) {
+    return 'Dissolved Oxygen (DO): Good';
   } else if (dissolvedO2 > 5) {
     return 'Dissolved Oxygen (DO): Bad';
   } else {
-    return 'Dissolved Oxygen (DO): Good';
+    return 'Dissolved Oxygen (DO): Bad';
   }
 }
 
 function chlorineCheck(chlorine) {
-  if (chlorine < 0.5) {
-    return 'Chlorine: Bad';
+  if (0.2<chlorine < 0.5) {
+    return 'Chlorine: Good';
   } else if (chlorine > 0.5) {
     return 'Chlorine: Bad';
   } else {
-    return 'Chlorine: Good';
+    return 'Chlorine: Bad';
   }
 }
 
 function conductivityCheck(conductivity) {
   if (conductivity < 1000) {
-    return 'Conductivity: Bad';
+    return 'Conductivity: Good';
   } else if (conductivity > 1000) {
     return 'Conductivity: Bad';
   } else {
-    return 'Conductivity: Good';
+    return 'Conductivity: Bad';
   }
 } 
       function validateInput(inputElement, minValue, maxValue) {
@@ -185,37 +185,37 @@ function conductivityCheck(conductivity) {
       });
       
       document.getElementById('temperature').addEventListener('input', function() {
-        if (!validateInput(this, -273, 100)) {
+        if (!validateInput(this, 0, 100)) {
           document.getElementById('resultsContainer').textContent = '';
         }
       });
       
       document.getElementById('turbidity').addEventListener('input', function() {
-        if (!validateInput(this, 0, Infinity)) {
+        if (!validateInput(this, 0, 10)) {
           document.getElementById('resultsContainer').textContent = '';
         }
       });
       
       document.getElementById('toc').addEventListener('input', function() {
-        if (!validateInput(this, 0, Infinity)) {
+        if (!validateInput(this, 0, 10)) {
           document.getElementById('resultsContainer').textContent = '';
         }
       });
       
       document.getElementById('dissolvedO2').addEventListener('input', function() {
-        if (!validateInput(this, 0, Infinity)) {
+        if (!validateInput(this, 0, 10)) {
           document.getElementById('resultsContainer').textContent = '';
         }
       });
       
       document.getElementById('chlorine').addEventListener('input', function() {
-        if (!validateInput(this, 0, Infinity)) {
+        if (!validateInput(this, 0, 10)) {
           document.getElementById('resultsContainer').textContent = '';
         }
       });
       
       document.getElementById('conductivity').addEventListener('input', function() {
-        if (!validateInput(this, 0, Infinity)) {
+        if (!validateInput(this, 0, 2000)) {
           document.getElementById('resultsContainer').textContent = '';
         }
       });
@@ -278,27 +278,27 @@ function conductivityCheck(conductivity) {
     });
 
     document.getElementById('temperature').addEventListener('input', function() {
-      validateInput(this, -273, 100);
+      validateInput(this, 0, 100);
     });
 
     document.getElementById('turbidity').addEventListener('input', function() {
-      validateInput(this, 0, Infinity);
+      validateInput(this, 0, 10);
     });
 
     document.getElementById('toc').addEventListener('input', function() {
-      validateInput(this, 0, Infinity);
+      validateInput(this, 0, 10);
     });
 
     document.getElementById('dissolvedO2').addEventListener('input', function() {
-      validateInput(this, 0, Infinity);
+      validateInput(this, 0, 10);
     });
 
     document.getElementById('chlorine').addEventListener('input', function() {
-      validateInput(this, 0, Infinity);
+      validateInput(this, 0, 10);
     });
 
     document.getElementById('conductivity').addEventListener('input', function() {
-      validateInput(this, 0, Infinity);
+      validateInput(this, 0, 2000);
     });
     
   </script>
