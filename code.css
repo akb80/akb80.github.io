@@ -5,6 +5,11 @@ body {
   opacity: 1;
 }
 
+main {
+  padding-bottom: 15px;
+  margin-bottom: 200px;
+}
+
 .container {
   max-width: 500px;
   margin: 0 auto;
@@ -78,9 +83,7 @@ a {
   text-decoration: underline;
 }
 
-/* Other existing styles */
 
-/* ... */
 
 header {
   padding: 40px;
