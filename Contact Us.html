@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contact Us</title>
-    <link rel="stylesheet" type="text/css" href="code.css" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Register Complaint</title>
+    <link rel="stylesheet" type="text/css" href="contact.css" />
     <style>
       body {
         background-image: url("new background.jpg");
         background-repeat: no-repeat;
         background-size: 100%;
         background-attachment: fixed;
-      }
-
-      h1 {
-        text-transform: uppercase;
-        text-decoration: underline;
-        text-shadow: 2px 1px 2px rgb(12, 167, 179);
-      }
-      h2 {
-        text-transform: uppercase;
       }
 
       body {
@@ -32,14 +24,68 @@
   </head>
   <body>
     <header>
-      <h1>Contact us</h1>
+      <h1>Register Complaint</h1>
     </header>
     <nav>
       <a href="index.html">Home</a>
-      <a href="PuneWater.html">Pune's water</a>
+      <a href="check.html">Let's Check</a>
       <a href="Sensor.html">Sensors</a>
     </nav>
-    <main>
+    <div class="container">
+      <form 
+      action="https://formspree.io/f/mqkooewb"
+      method="POST">
+          <h3>Register a complaint</h3>
+          <label>
+            Your Name:
+            <input type="text" id="name" placeholder="Your Name" name="Name" required>
+          </label>
+          <label>
+            Your email:
+            <input type="email"  id="email" placeholder="Email id" name="Email" required>
+          </label>
+          <label>
+            Your Phone:
+            <input type="number"  id="phone" placeholder="Phone no." name="Number" required>
+          </label>
+         
+          <label>
+            Your Complaint:
+          
+            <textarea name="Message" id="message" rows="4" placeholder="Complaint" required></textarea>
+          </label>
+         
+          
+          <button type="submit">Send</button>
+          <!-- <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Email id" required>
+          <input type="text" id="phone" placeholder="Phone no." required>
+          <textarea id="message" rows="4" placeholder="Complaint"></textarea>
+          <button type="submit">Send</button> -->
+      </form>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <!-- <script  src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+      function sendEmail(){
+      Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "abhitoyam@gmail.com",
+    Password : "hiwkhnlkpfftqian",
+    To : 'abhitoyam@gmail.com',
+    From :document.getElementById("email").value,
+    Subject :"New contact for enquiry",
+    Body : "Name: "+document.getElementById("name").value
+           +"<br> Email: "+document.getElementById("email").value
+           +"<br> Phone no: "+document.getElementById("phone").value
+           +"<br> Message:"+document.getElementById("message").value
+}).then(
+  message => alert(message )
+); -->
+      <!-- }
+    </script> -->
+    <!-- <main>
       <section>
         <table>
           <form>
@@ -53,11 +99,11 @@
           </form>
         </table>
       </section>
-    </main>
+    </main> -->
     <footer>
       <a href="FAQ.html">FAQ</a>
       <a href="About Us.html">About Us</a>
-      <a href="Contact Us.html">Contact Us</a>
+      <a href="Contact Us.html">Complaint</a>
       <a class="copyright" href="#">&copy; 2023 | TOYAM</a>
     </footer>
   </body>
