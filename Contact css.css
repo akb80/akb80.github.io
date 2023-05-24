@@ -78,7 +78,7 @@ header {
 form{
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: #f253ff54;
     display:flex;
     flex-direction: column;
     padding: 2vw 4vw;
@@ -87,28 +87,28 @@ form{
     border-radius: 10px;
 }
 form h3{
-    color:#555;
+    color:#2e2222;
     font-weight: 800;
     margin-bottom: 20px;
     padding-right: 100px
 }
 form input,form textarea{
-  display: flex;  
-  border:0;
-    margin: 10px 0;
-    padding: 20px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
+  display: flex;
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #9bffdc91;
+  font-size: 16px;
     
 }
 form button{
     padding:15px;
     background: #ff5361;
-    color: #fff;
+    color: #ffeb49;
     font-size: 18px;
     border: 0;
-    outline:none;
+    outline:auto;
     cursor:pointer;
     width: 150px;
     margin: 20px auto 0;
